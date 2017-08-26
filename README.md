@@ -1,5 +1,10 @@
 # my-personal-ruby-docker-build
 
+### Creating new ruby project
+To create new ruby project, do the follow command on the CLI.
+`docker run -it --rm --user "$(id -u):$(id -g)" -v "$PWD":/usr/src/app -w /usr/src/app rails rails new --skip-bundle my_app_name --database=postgresql`
+
+
 ### Execute bundle install after build
 IN the project file do:
 `docker-compose build`
